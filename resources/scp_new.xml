@@ -1,0 +1,209 @@
+
+<BnGModel xmlns:ns2="mxParams" xmlns:ns3="root" grid="1" tooltips="1" connect="1" fold="1" page="0" pageScale="1" pageWidth="826" pageHeight="1169">
+    <root>
+        <mxCell id="0"/>
+        <mxCell id="1"/>
+        <mxCell id="2" type="Processing" value="setbackground">
+            <mxParams>
+                <mxParam value="D:\\BNG\\bg.wav"/>
+            </mxParams>
+        </mxCell>
+        <mxCell id="3" type="Processing" value="setbackground">
+            <mxParams>
+                <mxParam value="D:\\BNG\\bg.wav"/>
+            </mxParams>
+        </mxCell>
+        <mxCell id="4" type="Processing" value="setvoiceeffect">
+            <mxParams>
+                <mxParam value="128"/>
+            </mxParams>
+        </mxCell>
+        <mxCell id="5" type="Start" value="mv-3011**">
+            <mxParams>
+                <mxParam shortcode="6183650" service="Magictest_digitcollection1" calltype="IVR" defaultlang="_E" recording="10" exittimer="0" autoanswer="true"/>
+            </mxParams>
+        </mxCell>
+        <mxCell id="6" type="Play" value="welcome">
+            <mxParams>
+                <mxParam previousdtmf="SELECT" nextdtmf="SELECT" startoverdtmf="SELECT" addtofavdtmf="SELECT" contentlist="117-Y:\Songs_new\welcome.wav" repeatcount="0" repeatcurrent="SELECT" seekdtmf="SELECT" randomplay="true" seek="false" startfrom="SELECT"/>
+            </mxParams>
+        </mxCell>
+        <mxCell id="7" type="Database" value="subscription">
+            <mxParams>
+                <mxParam checkdb="GetUserDetail"/>
+            </mxParams>
+        </mxCell>
+        <mxCell id="8" type="Normal" value="" source="6" target="7"/>
+        <mxCell id="9" type="DB" value="new" source="7" target="16"/>
+        <mxCell id="10" type="Play" value="billing in progress">
+            <mxParams>
+                <mxParam previousdtmf="SELECT" nextdtmf="SELECT" startoverdtmf="SELECT" addtofavdtmf="SELECT" contentlist="81-Y:\Songs_new\first\Language1.wav" repeatcount="0" repeatcurrent="SELECT" seekdtmf="SELECT" randomplay="true" seek="false" startfrom="SELECT"/>
+            </mxParams>
+        </mxCell>
+        <mxCell id="11" type="DB" value="pending" source="7" target="10"/>
+        <mxCell id="12" type="Exit" value=""/>
+        <mxCell id="13" type="Normal" value="" source="10" target="12"/>
+        <mxCell id="14" type="Processing" value="setlanguage">
+            <mxParams>
+                <mxParam value="_E"/>
+            </mxParams>
+        </mxCell>
+        <mxCell id="15" type="Processing" value="setlanguage">
+            <mxParams>
+                <mxParam value="_H"/>
+            </mxParams>
+        </mxCell>
+        <mxCell id="16" type="Navigation" value="select language">
+            <mxParams>
+                <mxParam promptfile="5-Y:\Songs_new\first\787blank_E.wav" repeatcount="2" timeout="30" bargein="true"/>
+            </mxParams>
+        </mxCell>
+        <mxCell id="17" type="DTMF" value="1" source="16" target="14"/>
+        <mxCell id="18" type="DTMF" value="2" source="16" target="15"/>
+        <mxCell id="19" type="DTMF" value="noinput" source="16" target="20"/>
+        <mxCell id="20" type="URL" value="subscribe">
+            <mxParams>
+                <mxParam url="http://172.0.0.3:8091/SubManager.aspx?reqType=sub#msisdn=$apartymsisdn$#operator=docomo#serviceId=FMGOLD01#channel=sms#shortcode=$shortcode$#transid=76513937#keyword=test#trialDays=0#involuntary=0" urltype="Subscription" method="Get"/>
+            </mxParams>
+        </mxCell>
+        <mxCell id="21" type="Normal" value="" source="14" target="20"/>
+        <mxCell id="22" type="Normal" value="" source="15" target="20"/>
+        <mxCell id="23" type="DTMF" value="1" source="30" target="29"/>
+        <mxCell id="24" type="DTMF" value="2" source="30" target="32"/>
+        <mxCell id="25" type="DTMF" value="3" source="30" target="4"/>
+        <mxCell id="26" type="DTMF" value="noinput" source="30" target="4"/>
+        <mxCell id="27" type="DTMF" value="4" source="30" target="33"/>
+        <mxCell id="28" type="DTMF" value="5" source="30" target="3"/>
+        <mxCell id="29" type="Processing" value="setvoiceeffect">
+            <mxParams>
+                <mxParam value="128"/>
+            </mxParams>
+        </mxCell>
+        <mxCell id="30" type="Navigation" value="voice effect">
+            <mxParams>
+                <mxParam promptfile="7-Y:\Songs_new\first\787_E.wav" repeatcount="0" timeout="25" bargein="true"/>
+                <mxParam promptfile="8-Y:\Songs_new\first\787_S.wav" repeatcount="0" timeout="25" bargein="true"/>
+            </mxParams>
+        </mxCell>
+        <mxCell id="31" type="Normal" value="" source="20" target="30"/>
+        <mxCell id="32" type="Processing" value="setvoiceeffect">
+            <mxParams>
+                <mxParam value="128"/>
+            </mxParams>
+        </mxCell>
+        <mxCell id="33" type="Processing" value="setbackground">
+            <mxParams>
+                <mxParam value="D:\\BNG\\bg.wav"/>
+            </mxParams>
+        </mxCell>
+        <mxCell id="34" type="Normal" value="" source="29" target="35"/>
+        <mxCell id="35" type="Play" value="to be set">
+            <mxParams>
+                <mxParam previousdtmf="SELECT" nextdtmf="SELECT" startoverdtmf="SELECT" addtofavdtmf="SELECT" contentlist="39-Y:\Songs_new\first\Copy of GetQuran_E.wav" repeatcount="0" repeatcurrent="SELECT" seekdtmf="SELECT" randomplay="true" seek="false" startfrom="SELECT"/>
+            </mxParams>
+        </mxCell>
+        <mxCell id="36" type="Normal" value="" source="32" target="35"/>
+        <mxCell id="37" type="Normal" value="" source="4" target="35"/>
+        <mxCell id="38" type="Normal" value="" source="33" target="35"/>
+        <mxCell id="39" type="Normal" value="" source="3" target="35"/>
+        <mxCell id="40" type="Dialout" value="dial">
+            <mxParams>
+                <mxParam cli="A party" dialout="B party" type="SELECT" cutonringing="false" resourceurl="http://$ip$:70/cgi-bin/rpcclient.exe?function=1#argument=$argument$#service=2"/>
+            </mxParams>
+        </mxCell>
+        <mxCell id="41" type="Normal" value="" source="85" target="40"/>
+        <mxCell id="42" type="Check" value="success" source="40" target="43"/>
+        <mxCell id="43" type="Patch" value="call patched">
+            <mxParams>
+                <mxParam patch=""/>
+            </mxParams>
+        </mxCell>
+        <mxCell id="44" type="Processing" value="setvoiceeffect">
+            <mxParams>
+                <mxParam value="128"/>
+            </mxParams>
+        </mxCell>
+        <mxCell id="45" type="DTMF" value="1" source="77" target="44"/>
+        <mxCell id="46" type="DTMF" value="2" source="77" target="50"/>
+        <mxCell id="47" type="DTMF" value="3" source="77" target="51"/>
+        <mxCell id="48" type="DTMF" value="4" source="77" target="52"/>
+        <mxCell id="49" type="DTMF" value="5" source="77" target="2"/>
+        <mxCell id="50" type="Processing" value="setvoiceeffect">
+            <mxParams>
+                <mxParam value="128"/>
+            </mxParams>
+        </mxCell>
+        <mxCell id="51" type="Processing" value="setvoiceeffect">
+            <mxParams>
+                <mxParam value="128"/>
+            </mxParams>
+        </mxCell>
+        <mxCell id="52" type="Processing" value="setbackground">
+            <mxParams>
+                <mxParam value="D:\\BNG\\bg.wav"/>
+            </mxParams>
+        </mxCell>
+        <mxCell id="53" type="Normal" value="" source="43" target="77"/>
+        <mxCell id="54" type="Check" value="failed" source="40" target="55"/>
+        <mxCell id="55" type="Play" value="sorry couldnt connect">
+            <mxParams>
+                <mxParam previousdtmf="SELECT" nextdtmf="SELECT" startoverdtmf="SELECT" addtofavdtmf="SELECT" contentlist="24-Y:\Songs_new\first\BlankTimer1_S.wav" repeatcount="0" repeatcurrent="SELECT" seekdtmf="SELECT" randomplay="true" seek="false" startfrom="SELECT"/>
+            </mxParams>
+        </mxCell>
+        <mxCell id="56" type="Play" value="mv announce">
+            <mxParams>
+                <mxParam previousdtmf="SELECT" nextdtmf="SELECT" startoverdtmf="SELECT" addtofavdtmf="SELECT" contentlist="115-Y:\Songs_new\13\UNR3_H.wav" repeatcount="0" repeatcurrent="SELECT" seekdtmf="SELECT" randomplay="true" seek="false" startfrom="SELECT"/>
+            </mxParams>
+        </mxCell>
+        <mxCell id="57" type="Normal" value="" source="55" target="56"/>
+        <mxCell id="58" type="Exit" value=""/>
+        <mxCell id="59" type="Normal" value="" source="56" target="58"/>
+        <mxCell id="60" type="DB" value="active" source="7" target="61"/>
+        <mxCell id="61" type="Navigation" value="existing user - voice effect">
+            <mxParams>
+                <mxParam promptfile="35-Y:\Songs_new\first\ChangeLocation_E.wav" repeatcount="0" timeout="25" bargein="true"/>
+            </mxParams>
+        </mxCell>
+        <mxCell id="62" type="DTMF" value="1" source="61" target="29"/>
+        <mxCell id="63" type="DTMF" value="2" source="61" target="32"/>
+        <mxCell id="64" type="DTMF" value="3" source="61" target="4"/>
+        <mxCell id="65" type="DTMF" value="noinput" source="61" target="4"/>
+        <mxCell id="66" type="DTMF" value="4" source="61" target="33"/>
+        <mxCell id="67" type="DTMF" value="5" source="61" target="3"/>
+        <mxCell id="68" type="DTMF" value="0" source="61" target="70"/>
+        <mxCell id="69" type="URL" value="unsubscribe">
+            <mxParams>
+                <mxParam url="http://172.0.0.3:8091/SubManager.aspx?reqType=sub#msisdn=$apartymsisdn$#operator=docomo#serviceId=FMGOLD01#channel=sms#shortcode=$shortcode$#transid=76513937#keyword=test#trialDays=0#involuntary=0" urltype="Subscription" method="Get"/>
+            </mxParams>
+        </mxCell>
+        <mxCell id="70" type="Navigation" value="unsubscribe??">
+            <mxParams>
+                <mxParam promptfile="73-Y:\Songs_new\first\IslamicTimerBlank_E.wav" repeatcount="2" timeout="0" bargein="true"/>
+            </mxParams>
+        </mxCell>
+        <mxCell id="71" type="DTMF" value="1" source="70" target="69"/>
+        <mxCell id="72" type="Play" value="thnx">
+            <mxParams>
+                <mxParam previousdtmf="SELECT" nextdtmf="SELECT" startoverdtmf="SELECT" addtofavdtmf="SELECT" contentlist="80-Y:\Songs_new\first\Language1.wav" repeatcount="0" repeatcurrent="SELECT" seekdtmf="SELECT" randomplay="true" seek="false" startfrom="SELECT"/>
+            </mxParams>
+        </mxCell>
+        <mxCell id="73" type="Normal" value="" source="69" target="72"/>
+        <mxCell id="74" type="Exit" value=""/>
+        <mxCell id="75" type="Normal" value="" source="72" target="74"/>
+        <mxCell id="76" type="DTMF" value="0" source="70" target="61"/>
+        <mxCell id="77" type="Wait" value=""/>
+        <mxCell id="78" type="Normal" value="" source="44" target="77"/>
+        <mxCell id="79" type="Normal" value="" source="50" target="77"/>
+        <mxCell id="80" type="Normal" value="" source="51" target="77"/>
+        <mxCell id="81" type="Normal" value="" source="52" target="77"/>
+        <mxCell id="82" type="Normal" value="" source="2" target="77"/>
+        <mxCell id="83" type="DTMF" value="4" source="16" target="16"/>
+        <mxCell id="84" type="Normal" value="" source="5" target="6"/>
+        <mxCell id="85" type="DigitCollection" value="">
+            <mxParams>
+                <mxParam repeatcount="0" minlen="1" maxlen="10" timeout="45" terminationchar="#" confirmation="false" digittype="bpartynumber"/>
+            </mxParams>
+        </mxCell>
+        <mxCell id="86" type="Normal" value="" source="35" target="85"/>
+    </root>
+</BnGModel>
